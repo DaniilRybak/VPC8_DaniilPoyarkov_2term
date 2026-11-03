@@ -1,0 +1,175 @@
+{
+  "uuid": "f4cd7e66-4934-407e-bf8b-01d9176bbf6e",
+  "lastMigration": 33,
+  "name": "Практика 5. HTTP GET",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "127.0.0.1",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "f7703a88-06bf-434c-b541-82dca6924c5e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "test",
+      "responses": [
+        {
+          "uuid": "d5874805-e07a-4ddc-8f39-3a9a6a3ac603",
+          "body": "{\n  \"message\": \"Привет из Mockoon\",\n  \"task\": 5\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "OK",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d77dd2bd-f390-469d-a784-d37388547b09",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "error",
+      "responses": [
+        {
+          "uuid": "0c2aba98-79d2-4594-91a2-6d3e79f908a2",
+          "body": "{\n  \"error\": \"Ресурс не найден\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "ddec715e-e991-44b1-aef7-442a7dbb8524",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "db40be74-1f45-4715-831d-8a6371682496",
+          "body": "{\n  \"message\": \"Главная страница Mockoon\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "OK",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f7703a88-06bf-434c-b541-82dca6924c5e"
+    },
+    {
+      "type": "route",
+      "uuid": "d77dd2bd-f390-469d-a784-d37388547b09"
+    },
+    {
+      "type": "route",
+      "uuid": "ddec715e-e991-44b1-aef7-442a7dbb8524"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
